@@ -16,7 +16,7 @@ class User(Base):
     follower = relationship('Follower', back_populates='user_from')
     followed = relationship('Follower', back_populates='user_to')
     post_user = relationship('Post', back_populates='user')
-    Comment_usar = relationship('Comment', back_populates='author')
+    comment_user = relationship('Comment', back_populates='author')
     #author = relationship(User, back_populates='comment_user')
     #user = relationship(User, back_populates='post')
     #user_from = relationship(User)
